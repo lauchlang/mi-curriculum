@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laura María Guerrero Fernández | Currículum</title>
+  <style>
+    :root {
+      /* Fondo general blanco para la página. */
+      --color-fondo: #FFFFFF;
+      /* Gris oscuro para el texto principal. */
+      --color-texto: #37352F;
+      /* Gris claro para las tarjetas y etiquetas. */
+      --color-fondo-suave: #F7F6F3;
+      /* Gris sutil para la línea divisoria. */
+      --color-borde: #E9E8E5;
+      /* Verde azulado sobrio para resaltar los títulos de sección. */
+      --color-titulo: #397B74;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-fondo);
+      color: var(--color-texto);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .curriculum {
+      display: grid;
+      grid-template-columns: minmax(230px, 30%) minmax(0, 70%);
+      width: min(100%, 1200px);
+      min-height: 100vh;
+      margin: 0 auto;
+    }
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 64px 32px;
+    }
+
+    .identidad {
+      display: grid;
+      grid-template-columns: minmax(96px, 38%) minmax(0, 1fr);
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+    }
+
+    h1,
+    h2,
+    p,
+    ul {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: clamp(1.55rem, 2.4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 1.12;
+    }
+
+    .foto-marco {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .foto {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 100%;
+      transform: scale(1.45);
+    }
+
+    .contacto {
+      display: grid;
+      width: 100%;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 40px;
+      font-style: normal;
+    }
+
+    .contacto a {
+      display: block;
+      overflow-wrap: anywhere;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: var(--color-fondo-suave);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contacto a:hover,
+    .contacto a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contenido {
+      min-width: 0;
+      padding: 64px 64px 72px 48px;
+    }
+
+    .contenido section {
+      padding: 0 0 28px;
+    }
+
+    .contenido h2 {
+      margin-bottom: 16px;
+      color: var(--color-titulo);
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .contenido h2::after {
+      display: block;
+      width: 34px;
+      height: 3px;
+      margin-top: 6px;
+      border-radius: 999px;
+      background: var(--color-titulo);
+      content: "";
+    }
+
+    .sobre-mi {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--color-borde);
+    }
+
+    .sobre-mi p {
+      margin-bottom: 0;
+    }
+
+    .lista-items,
+    .lista-simple {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .item {
+      display: grid;
+      justify-items: start;
+      gap: 4px;
+    }
+
+    .item strong {
+      font-weight: 700;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      max-width: 100%;
+      padding: 4px 11px;
+      border-radius: 14px;
+      background: var(--color-fondo-suave);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .lista-simple {
+      gap: 7px;
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .contenido section:last-child {
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .curriculum {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .perfil {
+        padding: 36px 28px 28px;
+      }
+
+      .contacto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 24px;
+        padding-top: 0;
+      }
+
+      .contenido {
+        padding: 36px 28px 48px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .perfil {
+        padding: 28px 20px 24px;
+      }
+
+      .identidad {
+        grid-template-columns: 96px minmax(0, 1fr);
+      }
+
+      .contacto {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contenido {
+        padding: 28px 20px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="curriculum">
+    <aside class="perfil">
+      <!-- ===== SECCIÓN: ENCABEZADO ===== -->
+      <div class="identidad">
+        <div class="foto-marco">
+          <img class="foto" src="imagenes/foto.jpg" alt="Foto de Laura María Guerrero Fernández">
+        </div>
+        <h1>Laura María Guerrero Fernández</h1>
+      </div>
+
+      <address class="contacto">
+        <a href="tel:+34644845000">Teléfono: +34 644 84 50 00</a>
+        <a href="mailto:lauramaria11105@gmail.com">Email: lauramaria11105@gmail.com</a>
+      </address>
+      <!-- ===== FIN: ENCABEZADO ===== -->
+    </aside>
+
+    <div class="contenido">
+      <!-- ===== SECCIÓN: SOBRE MÍ ===== -->
+      <section class="sobre-mi" aria-labelledby="sobre-mi">
+        <h2 id="sobre-mi">Sobre mí</h2>
+        <p>Estudiante de 4º curso de Trabajo Social en la UCA, proactiva y con fuerte vocación por la intervención socioeducativa. Mi experiencia internacional y mi implicación en los Scouts me han aportado una gran capacidad de liderazgo, adaptación a diferentes entornos y trabajo en equipo. Busco aportar mi responsabilidad y eficacia en nuevos retos.</p>
+      </section>
+      <!-- ===== FIN: SOBRE MÍ ===== -->
+
+      <!-- ===== SECCIÓN: VOLUNTARIADO ===== -->
+      <section aria-labelledby="voluntariado">
+        <h2 id="voluntariado">Voluntariado</h2>
+        <ul class="lista-items">
+          <li class="item">
+            <strong>Cruz Roja (El Puerto de Santa María)</strong>
+            <span class="etiqueta">Campaña de Navidad</span>
+            <span>Participación en la campaña de Navidad para la recaudación y recogida de juguetes destinados a niños en situación de necesidad.</span>
+          </li>
+          <li class="item">
+            <strong>Scouts (Grupo San Pablo 686, El Puerto De Santa María)</strong>
+            <span class="etiqueta">Participación activa</span>
+            <span>Participación activa desarrollando habilidades sociales, trabajo en equipo, liderazgo y organización de actividades.</span>
+          </li>
+        </ul>
+      </section>
+      <!-- ===== FIN: VOLUNTARIADO ===== -->
+
+      <!-- ===== SECCIÓN: EXPERIENCIA ===== -->
+      <section aria-labelledby="experiencia">
+        <h2 id="experiencia">Experiencia</h2>
+        <ul class="lista-items">
+          <li class="item">
+            <strong>La Viñera (Cádiz)</strong>
+            <span class="etiqueta">Camarera</span>
+          </li>
+          <li class="item">
+            <strong>Frost Valley YMCA (Nueva York)</strong>
+            <span class="etiqueta">Monitora de campamento · Campamento EEUU</span>
+          </li>
+          <li class="item">
+            <strong>Food truck Elsrdelasdonas - The Burger Cup (El Puerto de Santa María)</strong>
+            <span class="etiqueta">Staff</span>
+          </li>
+          <li class="item">
+            <strong>Alcalá de los Gazules</strong>
+            <span class="etiqueta">Animadora de cabalgatas</span>
+          </li>
+          <li class="item">
+            <strong>Motos GP (Jerez de la Frontera)</strong>
+            <span class="etiqueta">Staff de parking exterior</span>
+          </li>
+          <li class="item">
+            <strong>Agencia ModExpor</strong>
+            <span class="etiqueta">Figuración (Extra serie Disney +)</span>
+          </li>
+        </ul>
+      </section>
+      <!-- ===== FIN: EXPERIENCIA ===== -->
+
+      <!-- ===== SECCIÓN: FORMACIÓN ===== -->
+      <section aria-labelledby="formacion">
+        <h2 id="formacion">Formación</h2>
+        <ul class="lista-simple">
+          <li>Grado en Trabajo Social (Cursando 4º de Carrera) - Universidad de Cádiz</li>
+        </ul>
+      </section>
+      <!-- ===== FIN: FORMACIÓN ===== -->
+
+      <!-- ===== SECCIÓN: HABILIDADES ===== -->
+      <section aria-labelledby="habilidades">
+        <h2 id="habilidades">Habilidades</h2>
+        <ul class="lista-simple">
+          <li>Responsabilidad y puntualidad</li>
+          <li>Trabajo en equipo</li>
+          <li>Rapidez y eficacia</li>
+          <li>Capacidad para trabajar bajo presión</li>
+          <li>Adaptabilidad</li>
+        </ul>
+      </section>
+      <!-- ===== FIN: HABILIDADES ===== -->
+
+      <!-- ===== SECCIÓN: IDIOMAS ===== -->
+      <section aria-labelledby="idiomas">
+        <h2 id="idiomas">Idiomas</h2>
+        <ul class="lista-simple">
+          <li>Español: nativo</li>
+          <li>Inglés: B2 Cambridge (Capacidad para hablar fluidamente)</li>
+        </ul>
+      </section>
+      <!-- ===== FIN: IDIOMAS ===== -->
+
+      <!-- ===== SECCIÓN: OTROS DATOS ===== -->
+      <section aria-labelledby="otros-datos">
+        <h2 id="otros-datos">Otros datos</h2>
+        <ul class="lista-simple">
+          <li>Carnet B</li>
+        </ul>
+      </section>
+      <!-- ===== FIN: OTROS DATOS ===== -->
+    </div>
+  </main>
+</body>
+</html>
